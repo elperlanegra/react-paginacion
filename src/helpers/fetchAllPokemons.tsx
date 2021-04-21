@@ -13,10 +13,9 @@ export const fetchAllPokemons = async (): Promise<Pokemon[]> => {
 
 const transformSmallPokemonIntoPokemon = (smallPokemonList: SmallPokemon[]) : Pokemon[] =>{
 
-
     const pokemonArr: Pokemon[] = smallPokemonList.map( poke => {
 
-        const pokeArr = poke.url.split('/'); 
+        const pokeArr = poke.url.split('/');
         const id = pokeArr[6];
         const pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${ id }.png`;
 
@@ -27,9 +26,6 @@ const transformSmallPokemonIntoPokemon = (smallPokemonList: SmallPokemon[]) : Po
         }
 
     } );
-
-    console.log(pokemonArr);
-
 
     return pokemonArr;
 }
