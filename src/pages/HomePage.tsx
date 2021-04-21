@@ -1,7 +1,8 @@
+import {usePokemon} from "../hooks/usePokemon";
+
 export const HomePage = () => {
 
-    
-
+    usePokemon()
 
   return (
     <div className="mt-5">
@@ -18,7 +19,7 @@ export const HomePage = () => {
           </tr>
         </thead>
       </table>
-    
+
     </div>
   );
 };
